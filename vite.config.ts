@@ -21,8 +21,19 @@ export default defineConfig({
 	build: {
 		rollupOptions: {
 			external: [
-				'three/examples/jsm/objects/GroundProjectedSkybox'
+				'three/examples/jsm/objects/GroundProjectedSkybox',
+				'three/examples/jsm/loaders/HDRCubeTextureLoader',
+				'three/examples/jsm/loaders/RGBELoader'
 			]
 		}
+	},
+	resolve: {
+		alias: {
+			// Add any other Three.js modules that might be causing issues
+			'three/examples': 'three/examples'
+		}
+	},
+	optimizeDeps: {
+		exclude: ['@threlte/extras']
 	}
 });
