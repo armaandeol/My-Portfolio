@@ -4,18 +4,25 @@ import tailwindcss from '@tailwindcss/vite';
 import Icons from 'unplugin-icons/vite'	
 
 export default defineConfig({
-	
 	plugins: [
 		Icons({
 			compiler: 'svelte',
 			autoInstall: true
 		}),
 		sveltekit(),
-		tailwindcss()],
+		tailwindcss()
+	],
 	server: {
 		fs: {
 			// Allow access to files from the project root.
 			allow: ['..']
+		}
+	},
+	build: {
+		rollupOptions: {
+			external: [
+				'three/examples/jsm/objects/GroundProjectedSkybox'
+			]
 		}
 	}
 });
