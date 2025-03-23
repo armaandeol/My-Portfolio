@@ -4,6 +4,7 @@
 	"private": true,
 	"scripts": {
 		"dev": "concurrently \"npm:vite:dev\" \"npm:slicemachine\" --prefix-colors blue,magenta",
+		"install": "npm install --legacy-peer-deps",
 		"vite:dev": "vite dev",
 		"build": "vite build",
 		"preview": "vite preview",
