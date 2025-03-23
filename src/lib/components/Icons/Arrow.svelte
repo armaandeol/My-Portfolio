@@ -1,0 +1,1 @@
+<img src='/Icons/IcRoundArrowOutward.svg' alt='Arrow' class="w-6 h-6" />

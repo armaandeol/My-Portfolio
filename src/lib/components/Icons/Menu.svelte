@@ -1,0 +1,1 @@
+<img src="/Icons/IcRoundMenu.svg" alt="Menu" />

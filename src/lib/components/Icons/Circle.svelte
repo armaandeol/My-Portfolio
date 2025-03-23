@@ -1,0 +1,1 @@
+<img src='/Icons/MaterialSymbolsCircle.svg' alt='Material Design Icons Circle' />

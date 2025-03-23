@@ -1,0 +1,1 @@
+<img src = "/Icons/IcRoundClose.svg" alt = "Close" />

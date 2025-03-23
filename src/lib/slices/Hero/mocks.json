@@ -1,0 +1,24 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"firstt_name": {
+				"__TYPE__": "FieldContent",
+				"type": "Text",
+				"value": "Armaan "
+			},
+			"tag_line": {
+				"__TYPE__": "FieldContent",
+				"type": "Text",
+				"value": "Versatile Developer"
+			},
+			"last_name": {
+				"__TYPE__": "FieldContent",
+				"type": "Text",
+				"value": "Deol"
+			}
+		},
+		"items": []
+	}
+]

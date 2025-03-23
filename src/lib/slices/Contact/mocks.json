@@ -1,0 +1,24 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"heading": {
+				"__TYPE__": "FieldContent",
+				"value": "trunk",
+				"type": "Text"
+			},
+			"email": {
+				"__TYPE__": "FieldContent",
+				"value": "funny",
+				"type": "Text"
+			},
+			"message": {
+				"__TYPE__": "FieldContent",
+				"value": "chicken",
+				"type": "Text"
+			}
+		},
+		"items": []
+	}
+]
