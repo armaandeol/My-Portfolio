@@ -7,6 +7,7 @@
 
 	import Bounded from './Bounded.svelte';
 	import Heading from './Heading.svelte';
+	
     export let data;
 
     const formattedDate = new Date(data.page.data.date);
