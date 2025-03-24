@@ -21,9 +21,9 @@ export default defineConfig({
 	build: {
 		rollupOptions: {
 			external: [
-				'three/examples/jsm/objects/GroundProjectedSkybox',
-				'three/examples/jsm/loaders/HDRCubeTextureLoader',
-				'three/examples/jsm/loaders/RGBELoader'
+				// 'three/examples/jsm/objects/GroundProjectedSkybox',
+				// 'three/examples/jsm/loaders/HDRCubeTextureLoader',
+				// 'three/examples/jsm/loaders/RGBELoader'
 			]
 		}
 	},
