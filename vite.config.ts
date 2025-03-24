@@ -31,6 +31,7 @@ export default defineConfig({
 	resolve: {
 		alias: {
 			// Create empty modules for problematic imports
+			'three/examples/jsm/loaders/DRACOLoader': 'three',
 			'three/examples/jsm/shaders/HorizontalBlurShader': 'three',
 			'three/examples/jsm/shaders/VerticalBlurShader': 'three',
 			'three/examples/jsm/objects/GroundProjectedSkybox': 'three',
