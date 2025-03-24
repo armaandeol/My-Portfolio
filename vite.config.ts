@@ -1,7 +1,7 @@
 import { sveltekit } from '@sveltejs/kit/vite';
 import { defineConfig } from 'vite';
 import tailwindcss from '@tailwindcss/vite';
-import Icons from 'unplugin-icons/vite'	
+import Icons from 'unplugin-icons/vite'
 
 export default defineConfig({
 	plugins: [
@@ -14,26 +14,31 @@ export default defineConfig({
 	],
 	server: {
 		fs: {
-			// Allow access to files from the project root.
 			allow: ['..']
 		}
 	},
 	build: {
 		rollupOptions: {
 			external: [
-				// 'three/examples/jsm/objects/GroundProjectedSkybox',
-				// 'three/examples/jsm/loaders/HDRCubeTextureLoader',
-				// 'three/examples/jsm/loaders/RGBELoader'
-			]
+				// Externalize all Three.js examples/jsm modules
+				/three\/examples\/jsm\/.*/
+			],
+			// Increase the warning limit for large chunks
+			chunkSizeWarningLimit: 1000
 		}
 	},
+	// Add a resolver to handle missing Three.js modules
 	resolve: {
 		alias: {
-			// Add any other Three.js modules that might be causing issues
-			'three/examples': 'three/examples'
+			// Create empty modules for problematic imports
+			'three/examples/jsm/shaders/HorizontalBlurShader': 'three',
+			'three/examples/jsm/shaders/VerticalBlurShader': 'three',
+			'three/examples/jsm/objects/GroundProjectedSkybox': 'three',
+			'three/examples/jsm/loaders/HDRCubeTextureLoader': 'three',
+			'three/examples/jsm/loaders/RGBELoader': 'three'
 		}
 	},
 	optimizeDeps: {
-		exclude: ['@threlte/extras']
+		exclude: ['@threlte/extras', '@threlte/core']
 	}
 });
